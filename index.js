@@ -1,5 +1,5 @@
 const sum = (numA, numB) => {
-  if (typeof numA === 'string' || typeof numB === 'string') {
+  if (typeof numA !== 'number' || typeof numB !== 'number') {
     return 'Enter a valid number'
   }
   return numA + numB

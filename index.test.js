@@ -1,5 +1,5 @@
 
-const { sum, subtract } = require('./index')
+const { sum, subtract, vetNumber } = require('./index')
 
 test('adds two integers together', () => {
   expect(sum(1,2)).toBe(3)
@@ -19,4 +19,8 @@ test('subtracts second argument from first', () => {
 
 test('does not subtract non-numerical data types', () => {
   expect(subtract('foo', 'oo')).toBe('Enter a valid number')
+})
+
+test('only allows numerical data types to progress to calculation methods', () => {
+  expect(vetNumber('foo', 'oo')).toBe('Enter a valid number')
 })

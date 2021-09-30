@@ -1,5 +1,5 @@
 
-const { sum, subtract, vetNumber } = require('./index')
+const { sum, subtract, vetNumber, chooseOperand } = require('./index')
 
 test('adds two integers together', () => {
   expect(sum(1,2)).toBe(3)
@@ -23,4 +23,13 @@ test('does not subtract non-numerical data types', () => {
 
 test('only allows numerical data types to progress to calculation methods', () => {
   expect(vetNumber('foo', 'oo')).toBe('Enter a valid number')
+})
+
+test('calls calculation method if data type is correct', () => {
+  expect(vetNumber(1, 1)).toBe(2)
+})
+
+test('allows choice of mathematical operator', () => {
+  expect(chooseOperand('+')).toBe('plus')
+  expect(chooseOperand('-')).toBe('minus')
 })

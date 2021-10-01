@@ -33,3 +33,7 @@ test('allows choice of mathematical operator', () => {
   expect(chooseOperand('+')).toBe('plus')
   expect(chooseOperand('-')).toBe('minus')
 })
+
+test('checks that operator is valid', () => {
+  expect(chooseOperand('&')).toBe('Enter a valid mathematical operator')
+})

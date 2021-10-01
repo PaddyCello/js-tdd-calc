@@ -14,7 +14,7 @@ function vetNumber(numA, numB) {
 }
 
 function chooseOperand(operand) {
-  return operands[operand]
+  return operands[operand] ? operands[operand] : 'Enter a valid mathematical operator'
 }
 
 function sum(numA, numB) {
